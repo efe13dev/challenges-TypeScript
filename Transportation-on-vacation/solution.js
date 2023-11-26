@@ -1,4 +1,4 @@
-export function rentalCarCost(d: number): number {
+function rentalCarCost(d) {
   if (d >= 7) {
     return d * 40 - 50;
   } else if (d >= 3) {
@@ -7,5 +7,4 @@ export function rentalCarCost(d: number): number {
     return d * 40;
   }
 }
-
 console.log(rentalCarCost(5));
