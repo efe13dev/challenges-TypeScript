@@ -1,8 +1,7 @@
 function number(busStops: [number, number][]): number {
-  const peopleUp = busStops.reduce((a, b) => a + b[0], 0);
-  const peopleDown = busStops.reduce((a, b) => a + b[1], 0);
+  const peopleUp = busStops.reduce((a, [up, down]) => a + (up - down), 0);
 
-  return peopleUp - peopleDown;
+  return peopleUp;
 }
 
 console.log(
