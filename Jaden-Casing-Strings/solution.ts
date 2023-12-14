@@ -1,6 +1,6 @@
-String.prototype.toJadenCase = function () {
-  const words = this.split(' ');
-  const capitalizedWords = words.map(
+String.prototype.toJadenCase = function (this: string): string {
+  const words: string[] = this.split(' ');
+  const capitalizedWords: string[] = words.map(
     (word) => word.charAt(0).toUpperCase() + word.slice(1)
   );
   const jadenCaseString = capitalizedWords.join(' ');
