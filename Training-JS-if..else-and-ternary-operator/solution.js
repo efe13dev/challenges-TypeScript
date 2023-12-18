@@ -1,5 +1,4 @@
-"use strict";
-function saleHotdogs(n) {
+export function saleHotdogs(n) {
     if (n < 5)
         return n * 100;
     if (n >= 5 && n < 10)
