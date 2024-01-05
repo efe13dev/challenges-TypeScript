@@ -1,3 +1,3 @@
 function getChar(c: number): string {
-  return '';
+  return String.fromCharCode(c);
 }
