@@ -23,3 +23,4 @@ function revrot(str, sz) {
     });
     return result;
 }
+console.log(revrot('123456987654', 6));
