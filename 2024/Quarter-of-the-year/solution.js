@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 function quarterOf(month) {
-  return Math.ceil(month / 3);
+    return Math.ceil(month / 3);
 }
 console.log(quarterOf(6));
