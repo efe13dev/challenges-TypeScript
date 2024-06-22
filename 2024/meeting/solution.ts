@@ -16,7 +16,7 @@ function meeting(s: string): string {
   return formatedNames;
 }
 
-const s =
+const input =
   'Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn';
 
-console.log(meeting(s));
+console.log(meeting(input));
