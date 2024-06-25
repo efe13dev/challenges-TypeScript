@@ -1,8 +1,9 @@
+"use strict";
 function stairsIn20(stairs) {
-    var oneYear = stairs.flat().reduce(function (acc, count) { return acc + count; }, 0);
+    const oneYear = stairs.flat().reduce((acc, count) => acc + count, 0);
     return oneYear * 20;
 }
-var sunday = [
+let sunday = [
     6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 8274,
     7148, 6152, 5940, 8040, 9174, 7555, 7682, 5252, 8793, 8837, 7320, 8478,
     6063, 5751, 9716, 5085, 7315, 7859, 6628, 5425, 6331, 7097, 6249, 8381,
@@ -45,5 +46,5 @@ var sunday = [
     9585, 9649, 9838, 7150, 6567, 8524, 7613, 7809, 5562, 7799, 7179, 5184,
     7960, 9455, 5633, 9085
 ];
-var stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
+let stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
 console.log(stairsIn20(stairs));

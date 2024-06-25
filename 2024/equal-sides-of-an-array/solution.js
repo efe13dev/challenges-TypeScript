@@ -1,8 +1,9 @@
+"use strict";
 function findEvenIndex(arr) {
-    var totalSum = arr.reduce(function (acc, val) { return acc + val; }, 0);
-    var leftSum = 0;
-    for (var i = 0; i < arr.length; i++) {
-        var rightSum = totalSum - leftSum - arr[i];
+    let totalSum = arr.reduce((acc, val) => acc + val, 0);
+    let leftSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        const rightSum = totalSum - leftSum - arr[i];
         if (leftSum === rightSum)
             return i;
         leftSum += arr[i];
