@@ -1,7 +1,8 @@
+"use strict";
 function maxProduct(numbers, size) {
-    numbers.sort(function (a, b) { return b - a; });
-    var product = 1;
-    for (var i = 0; i < size; i++) {
+    numbers.sort((a, b) => b - a);
+    let product = 1;
+    for (let i = 0; i < size; i++) {
         product *= numbers[i];
     }
     return product;
