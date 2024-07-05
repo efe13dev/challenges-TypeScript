@@ -1,4 +1,5 @@
+"use strict";
 function sayHello(name, city, state) {
-    return "Hello ".concat(name.join(' '), "! Welcome to ").concat(city, ", ").concat(state, "!");
+    return `Hello ${name.join(' ')}! Welcome to ${city}, ${state}!`;
 }
 console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
