@@ -1,19 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.order = order;
-function order(words) {
+export function order(words) {
     if (words === '') {
         return '';
     }
-    var wordArray = words.split(' ');
-    wordArray.sort(function (a, b) {
-        var matchA = a.match(/\d/);
-        var matchB = b.match(/\d/);
+    const wordArray = words.split(' ');
+    wordArray.sort((a, b) => {
+        const matchA = a.match(/\d/);
+        const matchB = b.match(/\d/);
         if (matchA === null || matchB === null) {
             return 0;
         }
-        var numA = parseInt(matchA[0], 10);
-        var numB = parseInt(matchB[0], 10);
+        const numA = parseInt(matchA[0], 10);
+        const numB = parseInt(matchB[0], 10);
         return numA - numB;
     });
     return wordArray.join(' ');
