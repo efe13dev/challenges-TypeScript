@@ -1,6 +1,6 @@
 function catAndMouse(x: string): string {
-  const distance = x.indexOf('m') - x.indexOf('C');
-  if (distance > 0 && distance <= 4) {
+  const distance = Math.abs(x.indexOf('m') - x.indexOf('C'));
+  if (distance <= 4) {
     return 'Caught!';
   } else {
     return 'Escaped!';
