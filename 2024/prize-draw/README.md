@@ -1,37 +1,49 @@
+# Prize Draw
+
 ## Description
 
-To participate in a prize draw each one gives his/her firstname.
+To participate in a prize draw, each person provides their first name. Each letter of a first name has a value, which is its rank in the English alphabet (A and a have rank 1, B and b rank 2, and so on).
 
-Each letter of a firstname has a value which is its rank in the English alphabet. A and a have rank 1, B and b rank 2 and so on.
+The length of the first name is added to the sum of these ranks, resulting in a number we'll call "som."
 
-The length of the firstname is added to the sum of these ranks hence a number som.
+An array of random weights is linked to the first names, and each "som" is multiplied by its corresponding weight to calculate a "winning number."
 
-An array of random weights is linked to the firstnames and each som is multiplied by its corresponding weight to get what they call a winning number.
+**Example:**
 
-Example:
+```
 names: "COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH"
 weights: [1, 4, 4, 5, 2, 1]
 
 PauL -> som = length of firstname + 16 + 1 + 21 + 12 = 4 + 50 -> 54
-The _weight_ associated with PauL is 2 so PauL's _winning number_ is 54 \* 2 = 108.
-Now one can sort the firstnames in decreasing order of the winning numbers. When two people have the same winning number sort them alphabetically by their firstnames.
+The weight associated with PauL is 2, so PauL's winning number is 54 * 2 = 108.
+```
 
-Task:
-parameters: st a string of firstnames, we an array of weights, n a rank
+Now, you can sort the first names in descending order of their winning numbers. When two people have the same winning number, sort them alphabetically by their first names.
 
-return: the firstname of the participant whose rank is n (ranks are numbered from 1)
+## Task
 
-Example:
+**Parameters:**
+
+- `st`: A string of first names separated by commas.
+- `we`: An array of weights.
+- `n`: A rank.
+
+**Return:** The first name of the participant whose rank is `n` (ranks are numbered from 1).
+
+**Example:**
+
+```
 names: "COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH"
 weights: [1, 4, 4, 5, 2, 1]
 n: 4
 
 The function should return: "PauL"
-Notes:
-The weight array is at least as long as the number of names, it may be longer.
+```
 
-If st is empty return "No participants".
+**Notes:**
 
-If n is greater than the number of participants then return "Not enough participants".
+- The weight array is at least as long as the number of names; it may be longer.
+- If `st` is empty, return "No participants."
+- If `n` is greater than the number of participants, return "Not enough participants."
 
-See Examples Test Cases for more examples.
+**See Examples Test Cases for more examples.**
