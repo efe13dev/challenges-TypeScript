@@ -1,16 +1,16 @@
-export function rank(st: string, we: number[], n: number): string {
+function rank(st: string, we: number[], n: number): string {
   // Si no hay participantes, devuelve "No participants"
   if (st.length === 0) {
-    return "No participants";
+    return 'No participants';
   }
   // Si el rango solicitado es mayor que el número de participantes, devuelve "Not enough participants"
-  if (n > st.split(",").length) {
-    return "Not enough participants";
+  if (n > st.split(',').length) {
+    return 'Not enough participants';
   }
   // Define el alfabeto en minúsculas para calcular el rango de las letras
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   // Divide la cadena de nombres en un array de nombres
-  const names = st.split(",");
+  const names = st.split(',');
   // Crea un array para almacenar los "som" de cada participante
   const som: number[] = [];
   // Itera sobre cada nombre en el array de nombres
