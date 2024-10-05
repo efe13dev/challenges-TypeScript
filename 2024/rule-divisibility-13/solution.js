@@ -1,13 +1,14 @@
+"use strict";
 function thirt(n) {
-    var pattern = [1, 10, 9, 12, 3, 4];
-    var prevSum = 0;
-    var sum = n;
+    const pattern = [1, 10, 9, 12, 3, 4];
+    let prevSum = 0;
+    let sum = n;
     while (sum !== prevSum) {
         prevSum = sum;
         sum = String(sum)
             .split('')
             .reverse()
-            .reduce(function (acc, digit, index) {
+            .reduce((acc, digit, index) => {
             return acc + Number(digit) * pattern[index % pattern.length];
         }, 0);
     }

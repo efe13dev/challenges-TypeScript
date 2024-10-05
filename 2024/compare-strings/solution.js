@@ -1,9 +1,10 @@
+"use strict";
 function compare(s1, s2) {
     function isAlphabetic(str) {
         return /^[a-zA-Z]*$/.test(str);
     }
     function asciiSum(str) {
-        return str.split('').reduce(function (sum, char) { return sum + char.charCodeAt(0); }, 0);
+        return str.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
     }
     s1 = s1 ? s1.toUpperCase() : '';
     s2 = s2 ? s2.toUpperCase() : '';

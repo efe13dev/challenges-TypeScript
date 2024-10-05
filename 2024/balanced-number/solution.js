@@ -1,13 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.balancedNum = balancedNum;
-function balancedNum(number) {
-    var digits = String(number).split('').map(Number);
-    var length = digits.length;
-    var midIndex = Math.floor(length / 2);
-    var leftSum = 0;
-    var rightSum = 0;
-    for (var i = 0; i < midIndex - (length % 2 === 0 ? 1 : 0); i++) {
+export function balancedNum(number) {
+    const digits = String(number).split('').map(Number);
+    const length = digits.length;
+    const midIndex = Math.floor(length / 2);
+    let leftSum = 0;
+    let rightSum = 0;
+    for (let i = 0; i < midIndex - (length % 2 === 0 ? 1 : 0); i++) {
         leftSum += digits[i];
         rightSum += digits[length - 1 - i];
     }

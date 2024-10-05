@@ -1,6 +1,7 @@
+"use strict";
 function bump(bumps) {
-    var bumpsCount = 0;
-    bumps.split('').forEach(function (bump) {
+    let bumpsCount = 0;
+    bumps.split('').forEach((bump) => {
         if (bump === 'n') {
             bumpsCount++;
         }

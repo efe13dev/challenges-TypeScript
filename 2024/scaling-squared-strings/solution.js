@@ -1,11 +1,12 @@
+"use strict";
 function scale(s, k, n) {
     if (s === '')
         return '';
-    var lines = s.split('\n');
-    var scaledLines = lines.map(function (line) {
-        var scaledLine = line
+    const lines = s.split('\n');
+    const scaledLines = lines.map((line) => {
+        const scaledLine = line
             .split('')
-            .map(function (char) { return char.repeat(k); })
+            .map((char) => char.repeat(k))
             .join('');
         return Array(n).fill(scaledLine).join('\n');
     });

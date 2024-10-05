@@ -1,8 +1,9 @@
+"use strict";
 function nbMonths(startPriceOld, startPriceNew, savingPerMonth, percentLossByMonth) {
-    var months = 0;
-    var savings = 0;
-    var priceOld = startPriceOld;
-    var priceNew = startPriceNew;
+    let months = 0;
+    let savings = 0;
+    let priceOld = startPriceOld;
+    let priceNew = startPriceNew;
     while (priceOld + savings < priceNew) {
         months++;
         if (months % 2 === 0) {

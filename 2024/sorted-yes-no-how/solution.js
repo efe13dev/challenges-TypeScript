@@ -1,6 +1,7 @@
+"use strict";
 function isSortedAndHow(array) {
-    var isAscending = array.every(function (val, i, arr) { return i === 0 || arr[i - 1] <= val; });
-    var isDescending = array.every(function (val, i, arr) { return i === 0 || arr[i - 1] >= val; });
+    const isAscending = array.every((val, i, arr) => i === 0 || arr[i - 1] <= val);
+    const isDescending = array.every((val, i, arr) => i === 0 || arr[i - 1] >= val);
     if (isAscending) {
         return 'yes, ascending';
     }

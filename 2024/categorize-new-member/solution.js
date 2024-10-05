@@ -1,6 +1,6 @@
+"use strict";
 function openOrSenior(data) {
-    return data.map(function (_a) {
-        var age = _a[0], handicap = _a[1];
+    return data.map(([age, handicap]) => {
         if (age >= 55 && handicap > 7) {
             return 'Senior';
         }

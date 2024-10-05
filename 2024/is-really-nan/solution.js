@@ -1,3 +1,4 @@
+"use strict";
 function isReallyNaN(x) {
     return typeof x === 'number' && isNaN(x);
 }

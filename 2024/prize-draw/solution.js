@@ -1,3 +1,4 @@
+"use strict";
 function rank(st, we, n) {
     // Si no hay participantes, devuelve "No participants"
     if (st.length === 0) {
@@ -8,17 +9,17 @@ function rank(st, we, n) {
         return 'Not enough participants';
     }
     // Define el alfabeto en minúsculas para calcular el rango de las letras
-    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     // Divide la cadena de nombres en un array de nombres
-    var names = st.split(',');
+    const names = st.split(',');
     // Crea un array para almacenar los "som" de cada participante
-    var som = [];
+    const som = [];
     // Itera sobre cada nombre en el array de nombres
-    for (var i = 0; i < names.length; i++) {
+    for (let i = 0; i < names.length; i++) {
         // Inicializa la suma del "som" con la longitud del nombre
-        var sum = names[i].length;
+        let sum = names[i].length;
         // Itera sobre cada letra del nombre
-        for (var j = 0; j < names[i].length; j++) {
+        for (let j = 0; j < names[i].length; j++) {
             // Suma el rango de la letra (en minúsculas) al "som"
             sum += alphabet.indexOf(names[i][j].toLowerCase()) + 1;
         }
@@ -26,17 +27,17 @@ function rank(st, we, n) {
         som.push(sum * we[i]);
     }
     // Crea un nuevo array de objetos con el nombre y el "som" de cada participante
-    var result = names
-        .map(function (name, index) { return ({ name: name, som: som[index] }); })
+    const result = names
+        .map((name, index) => ({ name, som: som[index] }))
         // Ordena el array de participantes por "som" descendente y alfabéticamente en caso de empate
-        .sort(function (a, b) {
+        .sort((a, b) => {
         if (a.som === b.som) {
             return a.name.localeCompare(b.name);
         }
         return b.som - a.som;
     })
         // Extrae solo los nombres del array de participantes ordenados
-        .map(function (obj) { return obj.name; });
+        .map((obj) => obj.name);
     // Devuelve el nombre del participante en el rango especificado
     return result[n - 1];
 }

@@ -1,3 +1,4 @@
+"use strict";
 function shorterReverseLonger(a, b) {
     if (a.length === b.length) {
         return b + a.split('').reverse().join('') + b;

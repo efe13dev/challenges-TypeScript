@@ -1,3 +1,4 @@
+"use strict";
 function exclusiveOr(a, b) {
     return a !== b;
 }

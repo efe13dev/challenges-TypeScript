@@ -1,4 +1,5 @@
-var data = 'Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9' +
+"use strict";
+const data = 'Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9' +
     '\n' +
     'London:Jan 48.0,Feb 38.9,Mar 39.9,Apr 42.2,May 47.3,Jun 52.1,Jul 59.5,Aug 57.2,Sep 55.4,Oct 62.0,Nov 59.0,Dec 52.9' +
     '\n' +
@@ -17,7 +18,7 @@ var data = 'Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,
     'Beijing:Jan 3.9,Feb 4.7,Mar 8.2,Apr 18.4,May 33.0,Jun 78.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 18.0,Nov 9.3,Dec 2.7' +
     '\n' +
     'Lima:Jan 1.2,Feb 0.9,Mar 0.7,Apr 0.4,May 0.6,Jun 1.8,Jul 4.4,Aug 3.1,Sep 3.3,Oct 1.7,Nov 0.5,Dec 0.7';
-var data1 = 'Rome:Jan 90.2,Feb 73.2,Mar 80.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 147.7,Nov 121.0,Dec 97.9' +
+const data1 = 'Rome:Jan 90.2,Feb 73.2,Mar 80.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 147.7,Nov 121.0,Dec 97.9' +
     '\n' +
     'London:Jan 58.0,Feb 38.9,Mar 49.9,Apr 42.2,May 67.3,Jun 52.1,Jul 59.5,Aug 77.2,Sep 55.4,Oct 62.0,Nov 69.0,Dec 52.9' +
     '\n' +
@@ -36,30 +37,30 @@ var data1 = 'Rome:Jan 90.2,Feb 73.2,Mar 80.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5
     'Beijing:Jan 13.9,Feb 14.7,Mar 18.2,Apr 18.4,May 43.0,Jun 88.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 38.0,Nov 19.3,Dec 2.7' +
     '\n' +
     'Lima:Jan 11.2,Feb 10.9,Mar 10.7,Apr 10.4,May 10.6,Jun 11.8,Jul 14.4,Aug 13.1,Sep 23.3,Oct 1.7,Nov 0.5,Dec 10.7';
-var mean = function (town, strng) {
-    var townData = strng
+const mean = (town, strng) => {
+    const townData = strng
         .split('\n')
-        .find(function (line) { return line.startsWith(town + ':'); });
+        .find((line) => line.startsWith(town + ':'));
     if (!townData)
         return -1; // Devuelve -1 si la ciudad no está en los datos
-    var records = townData
+    const records = townData
         .split(':')[1] // Obtén solo la parte de los datos después del nombre de la ciudad
         .split(',') // Divide por mes
-        .map(function (record) { return parseFloat(record.split(' ')[1]); }); // Obtén solo el valor numérico de cada mes
-    return records.reduce(function (a, b) { return a + b; }, 0) / records.length;
+        .map((record) => parseFloat(record.split(' ')[1])); // Obtén solo el valor numérico de cada mes
+    return records.reduce((a, b) => a + b, 0) / records.length;
 };
-var variance = function (town, strng) {
-    var townData = strng
+const variance = (town, strng) => {
+    const townData = strng
         .split('\n')
-        .find(function (line) { return line.startsWith(town + ':'); });
+        .find((line) => line.startsWith(town + ':'));
     if (!townData)
         return -1; // Devuelve -1 si la ciudad no está en los datos
-    var records = townData
+    const records = townData
         .split(':')[1]
         .split(',')
-        .map(function (record) { return parseFloat(record.split(' ')[1]); });
-    var meanValue = records.reduce(function (a, b) { return a + b; }, 0) / records.length;
-    return (records.reduce(function (a, b) { return a + Math.pow(b - meanValue, 2); }, 0) / records.length);
+        .map((record) => parseFloat(record.split(' ')[1]));
+    const meanValue = records.reduce((a, b) => a + b, 0) / records.length;
+    return (records.reduce((a, b) => a + Math.pow(b - meanValue, 2), 0) / records.length);
 };
 // Ejemplos de uso
 console.log(mean('London', data));

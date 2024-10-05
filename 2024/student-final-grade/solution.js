@@ -1,3 +1,4 @@
+"use strict";
 function finalGrade(exam, projects) {
     if (exam > 90 || projects > 10) {
         return 100;

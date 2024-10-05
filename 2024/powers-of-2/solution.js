@@ -1,6 +1,7 @@
+"use strict";
 function powerOfTwo(n) {
-    var result = [];
-    for (var i = 0; i <= n; i++) {
+    const result = [];
+    for (let i = 0; i <= n; i++) {
         result.push(Math.pow(2, i));
     }
     return result;

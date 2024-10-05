@@ -1,7 +1,8 @@
+"use strict";
 function stringTransformer(str) {
-    var changedCaseStr = str
+    const changedCaseStr = str
         .split('')
-        .map(function (char) {
+        .map((char) => {
         if (char === char.toUpperCase()) {
             return char.toLowerCase();
         }
@@ -10,7 +11,7 @@ function stringTransformer(str) {
         }
     })
         .join('');
-    var reversedWordString = changedCaseStr.split(' ').reverse().join(' ');
+    const reversedWordString = changedCaseStr.split(' ').reverse().join(' ');
     return reversedWordString;
 }
 console.log(stringTransformer('Example Input'));

@@ -1,11 +1,12 @@
+"use strict";
 function pipeFix(numbers) {
     if (numbers.length === 0) {
         return [];
     }
-    var min = Math.min.apply(Math, numbers);
-    var max = Math.max.apply(Math, numbers);
-    var fixedPipes = [];
-    for (var i = min; i <= max; i++) {
+    const min = Math.min(...numbers);
+    const max = Math.max(...numbers);
+    const fixedPipes = [];
+    for (let i = min; i <= max; i++) {
         fixedPipes.push(i);
     }
     return fixedPipes;

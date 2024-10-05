@@ -1,3 +1,4 @@
+"use strict";
 function htmlSpecialChars(formData) {
     return formData
         .replace(/&/g, '&amp;')

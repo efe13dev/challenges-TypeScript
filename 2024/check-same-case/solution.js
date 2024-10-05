@@ -1,3 +1,4 @@
+"use strict";
 function sameCase(a, b) {
     if (!a || !b)
         return -1; // Retorna -1 si alguno de los strings está vacío.

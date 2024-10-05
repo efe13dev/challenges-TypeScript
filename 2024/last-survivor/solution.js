@@ -1,7 +1,7 @@
+"use strict";
 function lastSurvivor(letters, coords) {
-    var lettersArray = letters.split('');
-    for (var _i = 0, coords_1 = coords; _i < coords_1.length; _i++) {
-        var num = coords_1[_i];
+    let lettersArray = letters.split('');
+    for (const num of coords) {
         lettersArray.splice(num, 1);
     }
     return lettersArray.join('');
