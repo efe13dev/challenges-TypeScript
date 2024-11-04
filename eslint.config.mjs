@@ -3,7 +3,7 @@ import love from 'eslint-config-love';
 export default [
   {
     ...love,
-    files: ['**/*.js', '**/*.ts']
+    files: ['**/*.ts']
   },
   {
     languageOptions: {
@@ -16,6 +16,7 @@ export default [
   {
     rules: {
       '@typescript-eslint/no-magic-numbers': 'off'
+      //'no-console': 'warn'
     }
   }
 ];

@@ -106,12 +106,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": [
-    "2023",
-    "2024",
-    "src/**/*.js",
-    "src/**/*.ts",
-    "eslint.config.mjs"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["2023/**/*.ts", "2024/**/*.ts", "eslint.config.mjs"]
 }
