@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "dependencies": {
+    "eslint-config-love": "^97.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "name": "challenges-typescript",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

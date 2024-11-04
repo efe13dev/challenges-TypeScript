@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
+    /* Visita https://aka.ms/tsconfig para leer más sobre este archivo */
 
-    /* Projects */
+    /* Proyectos */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
     // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
     // "tsBuildInfoFile": "./.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
@@ -105,5 +105,13 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": [
+    "2023",
+    "2024",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "eslint.config.mjs"
+  ],
+  "exclude": ["node_modules"]
 }
