@@ -1,6 +1,6 @@
 export function balancedNum(number: number): string {
   const digits = String(number).split('').map(Number);
-  const length = digits.length;
+  const { length } = digits;
   const midIndex = Math.floor(length / 2);
 
   let leftSum = 0;
@@ -13,8 +13,3 @@ export function balancedNum(number: number): string {
 
   return leftSum === rightSum ? 'Balanced' : 'Not Balanced';
 }
-
-console.log(balancedNum(7));
-console.log(balancedNum(295591));
-console.log(balancedNum(959));
-console.log(balancedNum(27102983));
