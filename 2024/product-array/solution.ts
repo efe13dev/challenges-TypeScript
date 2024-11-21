@@ -1,6 +1,6 @@
 function productArray(arr: number[]): number[] {
-  const n = arr.length;
-  const result = new Array(n).fill(1);
+  const { length: n } = arr;
+  const result: number[] = new Array<number>(n).fill(1);
 
   let leftProduct = 1;
   for (let i = 0; i < n; i++) {
