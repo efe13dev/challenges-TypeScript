@@ -1,4 +1,4 @@
-function isValidWalk(walk: string[]) {
+export function isValidWalk(walk: string[]): boolean {
   if (walk.length !== 10) {
     return false;
   }
