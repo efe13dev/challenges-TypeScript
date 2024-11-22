@@ -1,11 +1,5 @@
-export function vowelHarmony(s: string): string {
-    return s
-        .split('')
-        .map((char) => {
-            if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
-                return char.toUpperCase();
-            }
-            return char;
-        })
-        .join('');
+export function vowelHarmony(word: string): string {
+  return /[aáoóuú]/.test(word.match(/[eéiíöőüűaáoóuú]/g)?.reverse()[0] ?? '')
+    ? word + 'nak'
+    : word + 'nek';
 }
